@@ -1,6 +1,3 @@
-# python3
-
-
 def build_heap(data):
     swaps = []
     # TODO: Creat heap and heap sort
@@ -20,7 +17,7 @@ def build_heap(data):
             max_index = right_child
         if i != max_index :
             data[i], data[max_index] = data[max_index], data[i]
-            swaps.append(()i, max_index)
+            swaps.append((i, max_index))
             sift_down(max_index)
             
     for i in range(size // 2, -1, -1):
