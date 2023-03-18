@@ -7,7 +7,7 @@ def build_heap(data):
     # try to achieve  O(n) and not O(n2)
     size = len(data)
     
-    def sift_down(i)
+    def sift_down(i):
     
         nonlocal swaps
         max_index = i
