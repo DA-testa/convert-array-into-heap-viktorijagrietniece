@@ -4,9 +4,9 @@ def build_heap(data):
     # try to achieve  O(n) and not O(n2)
     size = len(data)
     
-    def sift_down(data,i,size):
+    def sift_down(i):
     
-        swaps = []
+        nonlocal swaps
         max_index = i
         left_child = 2 * i + 1
         right_child = 2 * i + 2
