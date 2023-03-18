@@ -27,18 +27,25 @@ def build_heap(data):
      
 def main():
     
-    n = int(input().strip())
-    data = list(map(int, input().split()))
-
-  
-    assert len(data) == n
-
-    swaps = build_heap(data)
-
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
-
+    n = input().strip()
+    if n == 'I':
+         n = int(input())
+         data = list(map(int, input().split()))
+         assert len(data) == n
+         swaps = build_heap(data)
+         print(len(swaps))
+         for i, j in swaps:
+             print(i, j)
+    elif n == 'F':
+        file = input()
+        with open("tests/" + file, 'r') as f:
+             n = int(f.readline().strip())
+             data = list(map(int, input().split()))
+         assert len(data) == n
+         swaps = build_heap(data)
+         print(len(swaps))
+         for i, j in swaps:
+             print(i, j)
 
 if __name__ == "__main__":
     main()
